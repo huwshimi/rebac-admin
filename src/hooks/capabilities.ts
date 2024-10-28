@@ -25,8 +25,64 @@ export const useGetCapabilityActions = (endpoint: Endpoint) => {
     }
   }, [error]);
 
+  //   const caps: Capability[] = [
+  //     {
+  //       endpoint: "/swagger.json",
+  //       methods: ["GET"],
+  //     },
+  //     {
+  //       endpoint: "/capabilities",
+  //       methods: ["GET"],
+  //     },
+  //     {
+  //       endpoint: "/identities",
+  //       methods: ["GET", "POST"],
+  //     },
+  //     {
+  //       endpoint: "/identities/{id}",
+  //       methods: ["GET"],
+  //     },
+  //     {
+  //       endpoint: "/identities/{id}/groups",
+  //       methods: ["GET", "PATCH"],
+  //     },
+  //     {
+  //       endpoint: "/identities/{id}/entitlements",
+  //       methods: ["GET", "PATCH"],
+  //     },
+  //     {
+  //       endpoint: "/groups",
+  //       methods: ["GET", "POST"],
+  //     },
+  //     {
+  //       endpoint: "/groups/{id}",
+  //       methods: ["GET", "PUT", "DELETE"],
+  //     },
+  //     {
+  //       endpoint: "/groups/{id}/identities",
+  //       methods: ["GET", "PATCH"],
+  //     },
+  //     {
+  //       endpoint: "/groups/{id}/entitlements",
+  //       methods: ["GET", "PATCH"],
+  //     },
+  //     {
+  //       endpoint: "/entitlements",
+  //       methods: ["GET"],
+  //     },
+  //     {
+  //       endpoint: "/entitlements/raw",
+  //       methods: ["GET"],
+  //     },
+  //     {
+  //       endpoint: "/resources",
+  //       methods: ["GET"],
+  //     },
+  //   ] as Capability[];
+
   return {
     actions:
+      //   caps
       data?.data.data
         .find((capability) => capability.endpoint === endpoint)
         ?.methods.map((method) =>
